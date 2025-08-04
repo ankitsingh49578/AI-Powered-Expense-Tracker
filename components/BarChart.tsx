@@ -100,17 +100,17 @@ const BarChart = ({ records }: { records: Record[] }) => {
 
   // Get color based on amount (since we're aggregating multiple categories)
   const getAmountColor = (amount: number) => {
-    if (amount > 200)
+    if (amount > 10000)
       return {
         bg: isDark ? 'rgba(255, 99, 132, 0.3)' : 'rgba(255, 99, 132, 0.2)',
         border: isDark ? 'rgba(255, 99, 132, 0.8)' : 'rgba(255, 99, 132, 1)',
       }; // Red for high spending
-    if (amount > 100)
+    if (amount > 5000)
       return {
         bg: isDark ? 'rgba(255, 206, 86, 0.3)' : 'rgba(255, 206, 86, 0.2)',
         border: isDark ? 'rgba(255, 206, 86, 0.8)' : 'rgba(255, 206, 86, 1)',
       }; // Yellow for medium spending
-    if (amount > 50)
+    if (amount > 2000)
       return {
         bg: isDark ? 'rgba(54, 162, 235, 0.3)' : 'rgba(54, 162, 235, 0.2)',
         border: isDark ? 'rgba(54, 162, 235, 0.8)' : 'rgba(54, 162, 235, 1)',
@@ -170,7 +170,7 @@ const BarChart = ({ records }: { records: Record[] }) => {
               item.categories.length > 1
                 ? `Categories: ${item.categories.join(', ')}`
                 : `Category: ${item.categories[0]}`;
-            return [`Total: $${item.amount.toFixed(2)}`, categoriesText];
+            return [`Total: ₹${item.amount.toFixed(2)}`, categoriesText];
           },
         },
       },
@@ -201,7 +201,7 @@ const BarChart = ({ records }: { records: Record[] }) => {
       y: {
         title: {
           display: true,
-          text: 'Amount ($)',
+          text: 'Amount (₹)',
           font: {
             size: isMobile ? 12 : 16, // Smaller font on mobile
             weight: 'bold' as const,
@@ -214,7 +214,7 @@ const BarChart = ({ records }: { records: Record[] }) => {
           },
           color: isDark ? '#9ca3af' : '#7f8c8d', // Gray y-axis labels
           callback: function (value: string | number) {
-            return '$' + value; // Add dollar sign to y-axis labels
+            return '₹' + value; // Add dollar sign to y-axis labels
           },
         },
         grid: {
