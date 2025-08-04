@@ -168,7 +168,7 @@ const AIInsights = () => {
     return (
       <div className="bg-white/80 dark:bg-gray-800/80 backdrop-blur-sm p-4 sm:p-6 rounded-2xl shadow-xl border border-gray-100/50 dark:border-gray-700/50">
         <div className="flex items-center gap-2 sm:gap-3 mb-4 sm:mb-6">
-          <div className="w-8 h-8 sm:w-10 sm:h-10 bg-gradient-to-br from-emerald-500 via-green-500 to-teal-500 rounded-xl flex items-center justify-center shadow-lg">
+          <div className="w-8 h-8 sm:w-10 sm:h-10 bg-gradient-to-br from-blue-500 via-sky-500 to-cyan-500 rounded-xl flex items-center justify-center shadow-lg">
             <span className="text-white text-sm sm:text-lg">🤖</span>
           </div>
           <div className="flex-1">
@@ -176,12 +176,12 @@ const AIInsights = () => {
               AI Insights
             </h3>
             <p className="text-xs text-gray-500 dark:text-gray-400 mt-0.5">
-              Analyzing your spending patterns
+              Analyzing your spending patterns...
             </p>
           </div>
           <div className="flex items-center gap-1 sm:gap-2">
-            <div className="w-5 h-5 sm:w-6 sm:h-6 border-2 border-emerald-500/30 border-t-emerald-500 rounded-full animate-spin"></div>
-            <span className="text-xs sm:text-sm text-emerald-600 dark:text-emerald-400 font-medium hidden sm:block">
+            <div className="w-5 h-5 sm:w-6 sm:h-6 border-2 border-emerald-500/30 border-t-blue-500 rounded-full animate-spin"></div>
+            <span className="text-xs sm:text-sm text-blue-600 dark:text-blue-500 font-medium hidden sm:block">
               Analyzing...
             </span>
           </div>
@@ -221,7 +221,7 @@ const AIInsights = () => {
     <div className="bg-white/80 dark:bg-gray-800/80 backdrop-blur-sm p-4 sm:p-6 rounded-2xl shadow-xl border border-gray-100/50 dark:border-gray-700/50 hover:shadow-2xl">
       <div className="flex items-center justify-between mb-4 sm:mb-6">
         <div className="flex items-center gap-2 sm:gap-3">
-          <div className="w-8 h-8 sm:w-10 sm:h-10 bg-gradient-to-br from-emerald-500 via-green-500 to-teal-500 rounded-xl flex items-center justify-center shadow-lg">
+          <div className="w-8 h-8 sm:w-10 sm:h-10 bg-gradient-to-br from-blue-500 via-sky-500 to-cyan-500 rounded-xl flex items-center justify-center shadow-lg">
             <span className="text-white text-sm sm:text-lg">🤖</span>
           </div>
           <div>
@@ -234,8 +234,8 @@ const AIInsights = () => {
           </div>
         </div>
         <div className="flex items-center gap-2 sm:gap-3">
-          <div className="inline-flex items-center gap-2 bg-emerald-50 dark:bg-emerald-900/30 text-emerald-700 dark:text-emerald-300 px-2 py-1 rounded-full text-xs font-medium">
-            <span className="w-1.5 h-1.5 bg-emerald-500 dark:bg-emerald-400 rounded-full"></span>
+          <div className="inline-flex items-center gap-2 bg-emerald-50 dark:bg-blue-900/30 text-blue-700 dark:text-blue-300 px-2 py-1 rounded-full text-xs font-medium">
+            <span className="w-1.5 h-1.5 bg-blue-500 dark:bg-blue-400 rounded-full"></span>
             <span className="hidden sm:inline">{formatLastUpdated()}</span>
             <span className="sm:hidden">
               {formatLastUpdated().includes("ago")
@@ -245,7 +245,7 @@ const AIInsights = () => {
           </div>
           <button
             onClick={loadInsights}
-            className="w-7 h-7 sm:w-8 sm:h-8 bg-gradient-to-r from-emerald-600 via-green-500 to-teal-500 hover:from-emerald-700 hover:via-green-600 hover:to-teal-600 text-white rounded-xl flex items-center justify-center shadow-lg hover:shadow-xl transition-all duration-200"
+            className="w-7 h-7 sm:w-8 sm:h-8 bg-gradient-to-r from-blue-600 via-sky-500 to-cyan-500 hover:from-blue-700 hover:via-sky-600 hover:to-cyan-600 text-white rounded-xl flex items-center justify-center shadow-lg hover:shadow-xl transition-all duration-200"
             disabled={isLoading}
           >
             <span className="text-sm">🔄</span>
@@ -313,7 +313,7 @@ const AIInsights = () => {
                           <div className="w-3 h-3 border-2 border-current border-t-transparent rounded-full animate-spin"></div>
                         ) : (
                           <span className="text-xs">
-                            {currentAnswer ? "↑" : "→"}
+                            {currentAnswer ? "^" : "˅"}
                           </span>
                         )}
                       </span>
@@ -324,7 +324,7 @@ const AIInsights = () => {
                   {currentAnswer && (
                     <div className="mt-3 p-3 bg-white/70 dark:bg-gray-700/70 backdrop-blur-sm rounded-lg border border-gray-200 dark:border-gray-600">
                       <div className="flex items-start gap-2">
-                        <div className="w-5 h-5 sm:w-6 sm:h-6 bg-gradient-to-br from-emerald-500 via-green-500 to-teal-500 rounded-lg flex items-center justify-center flex-shrink-0">
+                        <div className="w-5 h-5 sm:w-6 sm:h-6 bg-gradient-to-br from-blue-500 via-sky-500 to-cyan-500 rounded-lg flex items-center justify-center flex-shrink-0">
                           <span className="text-white text-xs">🤖</span>
                         </div>
                         <div className="flex-1">
@@ -363,7 +363,7 @@ const AIInsights = () => {
           </div>
           <button
             onClick={loadInsights}
-            className="px-3 py-1.5 bg-gradient-to-r from-emerald-600 via-green-500 to-teal-500 hover:from-emerald-700 hover:via-green-600 hover:to-teal-600 text-white rounded-lg font-medium text-xs shadow-lg hover:shadow-xl transition-all duration-200"
+            className="px-3 py-1.5 bg-gradient-to-r from-blue-600 via-sky-500 to-cyan-500 hover:from-blue-700 hover:via-sky-600 hover:to-cyan-600 text-white rounded-lg font-medium text-xs shadow-lg hover:shadow-xl transition-all duration-200"
           >
             <span className="sm:hidden">Refresh</span>
             <span className="hidden sm:inline">Refresh Insights →</span>
